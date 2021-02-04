@@ -68,6 +68,8 @@ async function run() {
             } else {
               result = false;
             }
+          } else {
+            core.info(`The pr do not Mention ${issueNo}`);
           }
         }
       } else if (needCreatorAuthority) {
