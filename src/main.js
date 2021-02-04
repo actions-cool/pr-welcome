@@ -86,7 +86,7 @@ async function run() {
             owner,
             repo,
             issue_number: number,
-            comment,
+            body: comment,
           });
           core.info(`Actions: [create-comment][${number}] success!`);
         }
@@ -102,12 +102,11 @@ async function run() {
         }
         core.setFailed(`[${creator}] refuse!`);
       }
-
     } else {
       core.setFailed(`This Action only support PR!`);
     }
   } catch (error) {
-    core.info(error.message);
+    core.setFailed(error.message);
   }
 }
 
