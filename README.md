@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Action JavaScript Template</h1>
+<h1 align="center">Action JavaScri8pt Template</h1>
 <div align="center">
 A simple javascript template for rapid development of GitHub actions.
 </div>
