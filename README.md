@@ -8,7 +8,7 @@ Thanks for your contribution. 😅 But I maybe refuse.
 name: PR Welcome
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, edited, reopened]
 
 jobs:
