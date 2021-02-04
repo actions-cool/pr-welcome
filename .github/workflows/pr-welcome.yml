@@ -11,8 +11,6 @@ jobs:
       - uses: actions-cool/pr-welcome@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          refuse-issue-label: 'bug'
-          need-creator-authority: 'write'
           comment: |
             HI
           close: true
