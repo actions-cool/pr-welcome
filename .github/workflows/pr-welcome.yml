@@ -8,7 +8,7 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-cool/pr-welcome@main
+      - uses: actions-cool/pr-welcome@v0.0.3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           refuse-issue-label: 'bug'
