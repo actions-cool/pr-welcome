@@ -1,0 +1,16 @@
+name: PR Welcome
+
+on:
+  pull_request:
+    types: opened
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+        uses: actions-cool/pr-welcome@main
+        with:
+          refuse-issue-label: 'bug'
+          need-creator-authority: 'write'
+          comment: 123
+          close: true
