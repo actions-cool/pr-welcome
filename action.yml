@@ -1,5 +1,5 @@
 # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
-name: 'PR welcome'
+name: 'PR Welcome'
 description: 'Thanks for your contribution. 😅 But I refuse.'
 author: 'xrkffgg'
 

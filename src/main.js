@@ -72,12 +72,13 @@ async function run() {
         }
       }
 
+      core.info(`The result is ${result}.`);
+
       if (result && needCreatorAuthority) {
         result = await checkAuthority();
       }
 
       if (!result) {
-        core.info(`[${creator}] refuse!`);
         if (comment) {
           await octokit.issues.createComment({
             owner,
@@ -88,7 +89,7 @@ async function run() {
           core.info(`Actions: [create-comment][${number}] success!`);
         }
 
-        if (close) {
+        if (close == 'true') {
           await octokit.issues.update({
             owner,
             repo,
@@ -97,9 +98,11 @@ async function run() {
           });
           core.info(`Actions: [close-pr][${number}] success!`);
         }
+        core.setFailed(`[${creator}] refuse!`);
       }
+
     } else {
-      core.info(`This Action only support PR opened!`);
+      core.setFailed(`This Action only support PR opened!`);
     }
   } catch (error) {
     core.info(error.message);
