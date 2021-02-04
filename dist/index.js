@@ -5976,6 +5976,7 @@ async function run() {
       core.info(`The result is ${result}.`);
 
       if (!result) {
+        console.log(comment)
         if (comment) {
           await octokit.issues.createComment({
             owner,
