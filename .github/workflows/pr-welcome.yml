@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions-cool/pr-welcome@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH }}
           refuse-issue-label: 'bug'
           need-creator-authority: 'write'
           comment: |
