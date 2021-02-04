@@ -44,6 +44,7 @@ async function run() {
       }
 
       async function checkAuthority() {
+        let out;
         const res = await octokit.repos.getCollaboratorPermissionLevel({
           owner,
           repo,
@@ -52,9 +53,10 @@ async function run() {
         const { permission } = res.data;
         if (!checkPermission(needCreatorAuthority, permission)) {
           core.info(`The user ${creator} is not allow!`);
-          return false;
+          out = false;
         }
-        return true;
+        out = true;
+        return out;
       }
 
       // ********************************************************
