@@ -13,7 +13,7 @@ const context = github.context;
 async function run() {
   try {
     const { owner, repo } = context.repo;
-    if (context.eventName === 'pull_request' && context.payload.action == 'opened') {
+    if (context.eventName === 'pull_request') {
       const title = context.payload.pull_request.title;
       const body = context.payload.pull_request.body;
       const number = context.payload.pull_request.number;
@@ -102,7 +102,7 @@ async function run() {
       }
 
     } else {
-      core.setFailed(`This Action only support PR opened!`);
+      core.setFailed(`This Action only support PR!`);
     }
   } catch (error) {
     core.info(error.message);
