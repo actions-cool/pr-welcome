@@ -5976,25 +5976,32 @@ async function run() {
       core.info(`The result is ${result}.`);
 
       if (!result) {
-        console.log(comment)
         if (comment) {
-          await octokit.issues.createComment({
-            owner,
-            repo,
-            issue_number: number,
-            body: comment,
-          });
-          core.info(`Actions: [create-comment][${number}] success!`);
+          try {
+            await octokit.issues.createComment({
+              owner,
+              repo,
+              issue_number: number,
+              body: comment,
+            });
+            core.info(`Actions: [create-comment][${number}] success!`);
+          } catch (error) {
+            core.info(error.message);
+          }
         }
 
         if (close == 'true') {
-          await octokit.issues.update({
-            owner,
-            repo,
-            issue_number: number,
-            state: 'closed',
-          });
-          core.info(`Actions: [close-pr][${number}] success!`);
+          try {
+            await octokit.issues.update({
+              owner,
+              repo,
+              issue_number: number,
+              state: 'closed',
+            });
+            core.info(`Actions: [close-pr][${number}] success!`);
+          } catch (error) {
+            core.info(error.message);
+          }
         }
         core.setFailed(`[${creator}] refuse!`);
       }
