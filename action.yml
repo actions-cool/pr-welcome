@@ -1,23 +1,27 @@
 # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
 name: 'PR thank'
-description: 'A simple javascript template for rapid development of GitHub actions.'
+description: 'Thanks for your contribution. 😅 But I refuse.'
 author: 'xrkffgg'
 
 branding:
   # https://feathericons.com/
   # e.g. https://haya14busa.github.io/github-action-brandings/
-  icon: 'file'
-  color: 'blue'
+  icon: 'terminal'
+  color: 'gray-dark'
 
 inputs:
-  GITHUB_TOKEN:
+  token:
     description: Secret GitHub API token to use for making API requests.
     default: ${{ github.token }}
     required: true
-
-#outputs:
-#  result:
-#    description: action result
+  refuse-issue-label:
+    description: Don’t come when there is this label
+  need-creator-authority:
+    description: Author rights
+  comment:
+    description: Refuse comment
+  close:
+    description: If refuse close
 
 runs:
   using: 'node12'
