@@ -12,5 +12,6 @@ jobs:
         with:
           refuse-issue-label: 'bug'
           need-creator-authority: 'write'
-          comment: 123
+          comment: |
+            HI
           close: true
