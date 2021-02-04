@@ -5951,8 +5951,9 @@ async function run() {
         if (!checkPermission(needCreatorAuthority, permission)) {
           core.info(`The user ${creator} is not allow!`);
           out = false;
+        } else {
+          out = true;
         }
-        out = true;
         return out;
       }
 
@@ -5961,6 +5962,7 @@ async function run() {
         const issues = await getIssues();
         const issuesNumber = issues.map(({ number }) => number);
         for await (let issueNo of issuesNumber) {
+          core.info(`Check issue ${issueNo}`);
           if (result && (title.includes(issueNo) || body.includes(issueNo))) {
             if (needCreatorAuthority) {
               result = await checkAuthority();
@@ -5969,13 +5971,11 @@ async function run() {
             }
           }
         }
+      } else if (needCreatorAuthority) {
+        result = await checkAuthority();
       }
 
       core.info(`The result is ${result}.`);
-
-      if (result && needCreatorAuthority) {
-        result = await checkAuthority();
-      }
 
       if (!result) {
         if (comment) {
