@@ -80,6 +80,11 @@ async function run() {
         result = await checkAuthority();
       }
 
+
+      if (result && !refuseIssueLabel && !needCreatorAuthority) {
+        result = false;
+      }
+
       core.info(`The result is ${result}.`);
 
       if (!result) {
