@@ -7,7 +7,7 @@
 <h1 align="center">Action JavaScript Template</h1>
 <div align="center">
 A simple javascript template for rapid development of GitHub actions.
-</div>
+</div>2
 
 ![CI](https://github.com/actions-cool/action-js-template/workflows/CI/badge.svg)
 
