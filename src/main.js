@@ -51,12 +51,8 @@ async function run() {
           username: creator,
         });
         const { permission } = res.data;
-        if (!checkPermission(needCreatorAuthority, permission)) {
-          core.info(`The user ${creator} is not allow!`);
-          out = false;
-        } else {
-          out = true;
-        }
+        out = checkPermission(needCreatorAuthority, permission);
+        core.info(`The user ${creator} check ${out}`);
         return out;
       }
 
