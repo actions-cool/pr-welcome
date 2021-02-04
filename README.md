@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">Action JavaScript Template</h1>
-<div align="center">
+<div align="center">22
 A simple javascript template for rapid development of GitHub actions.
 </div>
 
