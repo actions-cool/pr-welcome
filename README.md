@@ -1,7 +1,7 @@
 <p align="center">
   <a href="">
     <img width="140" src="https://avatars.githubusercontent.com/u/73879334?s=200&v=4" />
-  </a>
+  </a>2
 </p>
 
 <h1 align="center">Action JavaScript Template</h1>
@@ -10,7 +10,7 @@ A simple javascript template for rapid development of GitHub actions.
 </div>
 
 ![CI](https://github.com/actions-cool/action-js-template/workflows/CI/badge.svg)
-
+2
 ## 🚀 How to use?
 
 ![](https://github.com/actions-cool/resources/blob/main/image/template-js.png?raw=true)
