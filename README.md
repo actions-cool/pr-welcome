@@ -39,8 +39,8 @@ jobs:
 
 ## Note
 
-- When no `refuse-issue-label` and `need-creator-authority`, no restrictions
-- Comment only once
+- When has `refuse-issue-label` or `need-creator-authority`, it will begin filter mode
+- Comment only once in a PR
 
 ## Changelog
 

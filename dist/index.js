@@ -5977,7 +5977,6 @@ async function run() {
         result = await checkAuthority();
       }
 
-
       if (result && !refuseIssueLabel && !needCreatorAuthority) {
         result = false;
       }
@@ -6035,7 +6034,12 @@ async function run() {
           });
           core.info(`Actions: [close-pr][${number}] success!`);
         }
-        core.setFailed(`[${creator}] refuse!`);
+
+        if (refuseIssueLabel || needCreatorAuthority) {
+          core.setFailed(`[${creator}] refuse!`);
+        } else {
+          core.setFailed(`[${creator}] welcome!`);
+        }
       }
     } else {
       core.setFailed(`This Action only support "pull_request" or "pull_request_target"!`);
