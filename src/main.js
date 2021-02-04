@@ -13,7 +13,7 @@ const context = github.context;
 async function run() {
   try {
     const { owner, repo } = context.repo;
-    if (context.eventName === 'pull_request') {
+    if (context.eventName === 'pull_request_target') {
       const title = context.payload.pull_request.title;
       const body = context.payload.pull_request.body;
       const number = context.payload.pull_request.number;
