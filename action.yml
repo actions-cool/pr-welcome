@@ -20,6 +20,8 @@ inputs:
     description: Author rights
   comment:
     description: Refuse comment
+  emoji:
+    description: comment emoji
   close:
     description: If refuse close
 

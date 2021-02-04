@@ -1,40 +1,51 @@
-<p align="center">
-  <a href="">
-    <img width="140" src="https://avatars.githubusercontent.com/u/73879334?s=200&v=4" />
-  </a>
-</p>
+# PR Welcome
 
-<h1 align="center">Action JavaScript Template</h1>
-<div align="center">
-A simple javascript template for rapid development of GitHub actions.
-</div>
+Thanks for your contribution. 😅 But I maybe refuse.
 
-![CI](https://github.com/actions-cool/action-js-template/workflows/CI/badge.svg)
+## How to use?
 
-## 🚀 How to use?
+```yml
+name: PR Welcome
 
-![](https://github.com/actions-cool/resources/blob/main/image/template-js.png?raw=true)
+on:
+  pull_request:
+    types: [opened, edited, reopened]
 
-## 📒 Catalog Introduction
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-cool/pr-welcome@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          refuse-issue-label: 'xxx'
+          need-creator-authority: 'write'
+          comment: |
+            HI ~
 
+            你好~
+          emoji: '+1, -1'
+          close: true
 ```
-├── .github/workflows/     The CI for make sure it is packaged correctly
-├── dist                   Package the generated Aciton execution code
-├── src                    Component home directory
-│   └── main.js            Your code
-└── action.yml             Action config
-```
 
-The rest of the documents can be consulted by yourself.
+| Name | Desc | Type | Required |
+| -- | -- | -- | -- |
+| token | GitHub token | string | ✔ |
+| refuse-issue-label | Only when the label included in the issue mentioned in the PR is triggered | string | ✖ |
+| need-creator-authority | Filter the permissions of the creator. Option: `read` `write` `admin` | string | ✖ |
+| comment | Comment content after filter | string | ✖ |
+| emoji | Comment emoji | string | ✖ |
+| close | If close pr | boolean | ✖ |
 
-## 🤖 Command introduction
+## Note
 
-| Name | Desc |
-| -- | -- |
-| package | action build for release |
-| format | prettier write |
-| format-check | prettier check |
+- When no `refuse-issue-label` and `need-creator-authority`, no restrictions
+- Comment only once
+
+## Changelog
+
+[CHANGELOG](./CHANGELOG.md)
 
 ## LICENSE
 
-[MIT](https://github.com/actions-cool/action-js-template/blob/main/LICENSE)
+[MIT](./LICENSE)
