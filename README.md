@@ -39,7 +39,7 @@ jobs:
 
 ## Note
 
-- When no `refuse-issue-label` and `need-creator-authority`, no restrictions
+- When no `refuse-issue-label` and `need-creator-authority`, everyone meet the conditions
 - Comment only once
 
 ## Changelog
