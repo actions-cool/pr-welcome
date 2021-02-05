@@ -1,6 +1,6 @@
-# PR Welcome
+# 😅 PR Welcome
 
-Thanks for your contribution. 😅 But I maybe refuse.
+Thanks for your contribution. But I maybe refuse.
 
 ## How to use?
 
