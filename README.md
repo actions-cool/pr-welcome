@@ -24,7 +24,7 @@ jobs:
             HI ~
 
             你好~
-          emoji: '+1, -1'
+          emoji: '+1, -1, heart'
           close: true
 ```
 
@@ -34,7 +34,7 @@ jobs:
 | refuse-issue-label | Only when the label included in the issue mentioned in the PR is triggered | string | ✖ |
 | need-creator-authority | Filter the permissions of the creator. Option: `read` `write` `admin` | string | ✖ |
 | comment | Comment content after filter | string | ✖ |
-| emoji | Comment emoji | string | ✖ |
+| emoji | Comment [emoji](#emoji-list) | string | ✖ |
 | close | If close pr | boolean | ✖ |
 
 ## Note
@@ -45,6 +45,19 @@ jobs:
 ## Changelog
 
 [CHANGELOG](./CHANGELOG.md)
+
+## Emoji List
+
+| content | emoji |
+| -- | -- |
+| `+1` | 👍 |
+| `-1` | 👎 |
+| `laugh` | 😄 |
+| `confused` | 😕 |
+| `heart` | ❤️ |
+| `hooray` | 🎉 |
+| `rocket` | 🚀 |
+| `eyes` | 👀 |
 
 ## LICENSE
 

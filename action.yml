@@ -18,8 +18,6 @@ inputs:
     description: Don’t come when there is this label
   need-creator-authority:
     description: Author rights
-  only-first:
-    description: Only first contribution
   comment:
     description: Refuse comment
   emoji:
