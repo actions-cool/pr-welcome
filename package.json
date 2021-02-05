@@ -2,7 +2,7 @@
   "name": "pr-welcome",
   "version": "1.0.0",
   "private": true,
-  "description": "Thanks for your contribution. 😅 But I refuse.",
+  "description": "Thanks for your contribution. 😅 But I maybe refuse.",
   "main": "src/main.js",
 
   "scripts": {
