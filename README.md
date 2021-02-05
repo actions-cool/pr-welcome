@@ -39,7 +39,7 @@ jobs:
 
 ## Note
 
-- When has `refuse-issue-label` or `need-creator-authority`, it will begin filter mode
+- When has `refuse-issue-label` or `need-creator-authority`, it will start filter mode
 - Comment only once in a PR
 
 ## Changelog
