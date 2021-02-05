@@ -18,7 +18,7 @@ jobs:
       - uses: actions-cool/pr-welcome@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          refuse-issue-label: 'xxx'
+          refuse-issue-label: 'xxxx'
           need-creator-authority: 'write'
           comment: |
             HI ~
