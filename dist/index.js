@@ -5924,6 +5924,7 @@ async function run() {
 
       const comment = core.getInput('comment');
       const emoji = core.getInput('emoji');
+      const PRemoji = core.getInput('pr-emoji');
       const close = core.getInput('close');
 
       let result = true;
@@ -6033,6 +6034,20 @@ async function run() {
             state: 'closed',
           });
           core.info(`Actions: [close-pr][${number}] success!`);
+        }
+
+        if (PRemoji && context.eventName === 'pull_request_target') {
+          for await (let content of dealStringToArr(PRemoji)) {
+            if (ALLEMOJI.includes(content)) {
+              await octokit.reactions.createForIssue({
+                owner,
+                repo,
+                issue_number: number,
+                content,
+              });
+              core.info(`Actions: [add-PRemoji][${content}] success!`);
+            }
+          }
         }
 
         if (refuseIssueLabel || needCreatorAuthority) {

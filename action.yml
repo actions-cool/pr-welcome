@@ -21,7 +21,9 @@ inputs:
   comment:
     description: Refuse comment
   emoji:
-    description: comment emoji
+    description: Comment emoji
+  pr-emoji:
+    description: Add emoji to PR
   close:
     description: If refuse close
 
