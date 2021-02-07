@@ -16,4 +16,5 @@ jobs:
           comment: |
             HI @${{ github.event.pull_request.user.login }}. Thanks for your contribution. 😅 But I refuse.
           emoji: '+1, -1, heart'
+          pr-emoji: '+1, -1'
           close: true
