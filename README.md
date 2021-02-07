@@ -3,7 +3,7 @@
 Thanks for your contribution. But I maybe refuse.
 
 ## How to use?
-
+1
 ```yml
 name: PR Welcome
 
