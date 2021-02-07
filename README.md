@@ -35,6 +35,7 @@ jobs:
 | need-creator-authority | Filter the permissions of the creator. Option: `read` `write` `admin` | string | ✖ |
 | comment | Comment content after filter | string | ✖ |
 | emoji | Comment [emoji](#emoji-list) | string | ✖ |
+| pr-emoji | Add emoji to PR | string | ✖ |
 | close | If close pr | boolean | ✖ |
 
 ## Note
