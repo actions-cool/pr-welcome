@@ -42,23 +42,11 @@ jobs:
 
 - When has `refuse-issue-label` or `need-creator-authority`, it will start filter mode
 - Comment only once in a PR
+- Triger event only support `pull_request` and `pull_request_target`. When use `pull_request`, the Action will only show the CI status icon(Because of permissions). When use `pull_request_target`, must [see](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request_target)
 
 ## Changelog
 
 [CHANGELOG](./CHANGELOG.md)
-
-## 💖 Who is using?
-
-<table>
-  <tr>
-    <td align="center" width="180">
-      <a href="https://github.com/ant-design/ant-design">
-        <img src="https://avatars1.githubusercontent.com/u/12101536?s=200&v=4" width="46" />
-        <div>ant-design</div>
-      </a>
-    </td>
-  </tr>
-</table>
 
 ## Emoji List
 
