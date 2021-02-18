@@ -2,7 +2,7 @@
 
 Thanks for your contribution. But I maybe refuse.
 
-## How to use?
+## How to use?？
 
 ```yml
 name: PR Welcome
