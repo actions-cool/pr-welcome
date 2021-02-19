@@ -9,7 +9,7 @@ Thanks for your contribution. But I maybe refuse.
 ## How to use?
 
 ```yml
-name: PR Welcome
+name: PR Welcome2
 
 on:
   pull_request_target:
