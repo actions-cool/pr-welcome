@@ -5940,7 +5940,7 @@ async function run() {
           page,
         });
         if (issues.length >= 100) {
-          issues = issues.concat(await getIssues(params, page + 1));
+          issues = issues.concat(await getIssues(page + 1));
         }
         return issues;
       }
@@ -5997,6 +5997,7 @@ async function run() {
           for (let i = 0; i < commentsArr.length; i++) {
             if (commentsArr[i].body.includes(FIXED)) {
               ifHasComment = true;
+              break;
             }
           }
 
