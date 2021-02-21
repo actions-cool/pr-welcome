@@ -6054,7 +6054,7 @@ async function run() {
         if (refuseIssueLabel || needCreatorAuthority) {
           core.setFailed(`[${creator}] refuse!`);
         } else {
-          core.setFailed(`[${creator}] welcome!`);
+          core.info(`[${creator}] welcome!`);
         }
       }
     } else {

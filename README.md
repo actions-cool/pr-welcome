@@ -19,7 +19,7 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-cool/pr-welcome@v1.1.1
+      - uses: actions-cool/pr-welcome@v1.1.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           refuse-issue-label: 'xxx'
