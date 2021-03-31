@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/marketplace-pr--welcome-blueviolet?style=flat-square)](https://github.com/marketplace/actions/pr-welcome)
 [![](https://img.shields.io/github/v/release/actions-cool/pr-welcome?style=flat-square&color=orange)](https://github.com/actions-cool/pr-welcome/releases)
 
-Thanks for your contribution. But I maybe refuse.
+Thanks for your contribution. But 2I maybe refuse.
 
 ## How to use?
 
