@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.1.3
+
+`2021.03.31`
+
+- perf: body check number.
+
 ## v1.1.2
 
 `2021.02.21`

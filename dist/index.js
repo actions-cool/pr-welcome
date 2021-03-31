@@ -5976,7 +5976,7 @@ async function run() {
               result = false;
             }
           } else {
-            core.info(`The pr do not Mention ${issueNo}`);
+            core.info(`The pr do not mention issue ${issueNo}`);
           }
         }
       } else if (needCreatorAuthority) {
