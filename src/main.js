@@ -67,7 +67,12 @@ async function run() {
         const issuesNumber = issues.map(({ number }) => number);
         for await (let issueNo of issuesNumber) {
           core.info(`Check issue ${issueNo}`);
-          if (result && (title.includes(issueNo) || body.includes(issueNo))) {
+          if (
+            result &&
+            (title.includes(issueNo) ||
+              body.includes(`#${issueNo}`) ||
+              body.includes(`issues/${issueNo}`))
+          ) {
             if (needCreatorAuthority) {
               result = await checkAuthority();
             } else {
