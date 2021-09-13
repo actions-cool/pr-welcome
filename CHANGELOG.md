@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.0
+
+- feat: add `reviewers`.
+
 ## v1.1.3
 
 `2021.03.31`

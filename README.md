@@ -19,7 +19,7 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-cool/pr-welcome@v1.1.2
+      - uses: actions-cool/pr-welcome@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           refuse-issue-label: 'xxx'
@@ -29,6 +29,7 @@ jobs:
 
             你好~
           emoji: '+1, -1, heart'
+          reviewers: 'user1, user2'
           close: true
 ```
 
@@ -41,6 +42,7 @@ jobs:
 | emoji | Comment [emoji](#emoji-list) | string | ✖ |
 | pr-emoji | Add emoji to PR | string | ✖ |
 | close | If close pr | boolean | ✖ |
+| reviewers | Add reviewers to PR | string | ✖ |
 
 ## Note
 

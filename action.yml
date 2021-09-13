@@ -26,6 +26,8 @@ inputs:
     description: Add emoji to PR
   close:
     description: If refuse close
+  reviewers:
+    description: Add description to PR
 
 runs:
   using: 'node12'

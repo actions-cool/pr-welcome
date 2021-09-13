@@ -29,6 +29,7 @@ async function run() {
       const emoji = core.getInput('emoji');
       const PRemoji = core.getInput('pr-emoji');
       const close = core.getInput('close');
+      const reviewersString = core.getInput('reviewers');
 
       let result = true;
 
@@ -93,7 +94,7 @@ async function run() {
       core.info(`The result is ${result}.`);
 
       if (!result) {
-        if (comment && context.eventName === 'pull_request_target') {
+        if (comment) {
           let ifHasComment = false;
           const commentData = await octokit.issues.listComments({
             owner,
@@ -135,17 +136,18 @@ async function run() {
           }
         }
 
-        if (close == 'true' && context.eventName === 'pull_request_target') {
-          await octokit.issues.update({
+        if (reviewersString) {
+          const reviewers = dealStringToArr(reviewersString);
+          await octokit.pulls.requestReviewers({
             owner,
             repo,
-            issue_number: number,
-            state: 'closed',
+            pull_number: number,
+            reviewers,
           });
-          core.info(`Actions: [close-pr][${number}] success!`);
+          core.info(`Actions: [add-reviewers][${reviewersString}] success!`);
         }
 
-        if (PRemoji && context.eventName === 'pull_request_target') {
+        if (PRemoji) {
           for await (let content of dealStringToArr(PRemoji)) {
             if (ALLEMOJI.includes(content)) {
               await octokit.reactions.createForIssue({
@@ -157,6 +159,16 @@ async function run() {
               core.info(`Actions: [add-PRemoji][${content}] success!`);
             }
           }
+        }
+
+        if (close == 'true') {
+          await octokit.issues.update({
+            owner,
+            repo,
+            issue_number: number,
+            state: 'closed',
+          });
+          core.info(`Actions: [close-pr][${number}] success!`);
         }
 
         if (refuseIssueLabel || needCreatorAuthority) {
