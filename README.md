@@ -49,6 +49,7 @@ jobs:
 - When has `refuse-issue-label` or `need-creator-authority`, it will start filter mode
 - Comment only once in a PR
 - Triger event only support `pull_request` and `pull_request_target`. When use `pull_request`, the Action will only show the CI status icon(Because of permissions). When use `pull_request_target`, must [see](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request_target)
+- Can use v1 or v1.2.0
 
 ## Changelog
 
