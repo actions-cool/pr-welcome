@@ -30,6 +30,7 @@ jobs:
             你好~
           emoji: '+1, -1, heart'
           reviewers: 'user1, user2'
+          review-creator: false
           close: true
 ```
 
@@ -43,6 +44,7 @@ jobs:
 | pr-emoji | Add emoji to PR | string | ✖ |
 | close | If close pr | boolean | ✖ |
 | reviewers | Add reviewers to PR | string | ✖ |
+| review-creator | If creator review. Default `true` | boolean | ✖ |
 
 ## Note
 

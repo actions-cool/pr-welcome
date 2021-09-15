@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.3.0
+
+`2021.09.15`
+
+- feat: add `review-creator`.
+
 ## v1.2.0
 
 `2021.09.13`

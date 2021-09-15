@@ -28,6 +28,8 @@ inputs:
     description: If refuse close
   reviewers:
     description: Add description to PR
+  review-creator:
+    description: If add creator review
 
 runs:
   using: 'node12'

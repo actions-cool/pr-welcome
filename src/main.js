@@ -30,6 +30,7 @@ async function run() {
       const PRemoji = core.getInput('pr-emoji');
       const close = core.getInput('close');
       const reviewersString = core.getInput('reviewers');
+      const reviewCreator = core.getInput('review-creator') || 'true';
 
       let result = true;
 
@@ -137,7 +138,10 @@ async function run() {
         }
 
         if (reviewersString) {
-          const reviewers = dealStringToArr(reviewersString);
+          let reviewers = dealStringToArr(reviewersString);
+          if (reviewCreator === 'false') {
+            reviewers = reviewers.filter(o => o !== creator);
+          }
           await octokit.pulls.requestReviewers({
             owner,
             repo,
