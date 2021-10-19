@@ -36,7 +36,7 @@ jobs:
 
 | Name | Desc | Type | Required |
 | -- | -- | -- | -- |
-| token | GitHub token | string | ✔ |
+| token | GitHub token | string | ✖ |
 | refuse-issue-label | Only when the label included in the issue mentioned in the PR is triggered | string | ✖ |
 | need-creator-authority | Filter the permissions of the creator. Option: `read` `write` `admin` | string | ✖ |
 | comment | Comment content after filter | string | ✖ |
