@@ -2,7 +2,9 @@ const core = require('@actions/core');
 const { Octokit } = require('@octokit/rest');
 const github = require('@actions/github');
 
-const { checkPermission, dealStringToArr } = require('./util.js');
+// const { checkPermission } = require('actions-util/lib/check');
+// const { dealStringToArr } = require('actions-util/lib/deal');
+// const { THANKS } = require('actions-util/lib/thanks');
 
 // **********************************************************
 const token = core.getInput('token');
@@ -181,6 +183,8 @@ async function run() {
           core.info(`[${creator}] welcome!`);
         }
       }
+
+      core.info(THANKS);
     } else {
       core.setFailed(`This Action only support "pull_request" or "pull_request_target"!`);
     }
