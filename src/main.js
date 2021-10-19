@@ -2,9 +2,9 @@ const core = require('@actions/core');
 const { Octokit } = require('@octokit/rest');
 const github = require('@actions/github');
 
-// const { checkPermission } = require('actions-util/lib/check');
-// const { dealStringToArr } = require('actions-util/lib/deal');
-// const { THANKS } = require('actions-util/lib/thanks');
+const { checkPermission } = require('actions-util/lib/check');
+const { dealStringToArr } = require('actions-util/lib/deal');
+const { THANKS } = require('actions-util/lib/thanks');
 
 // **********************************************************
 const token = core.getInput('token');
@@ -73,9 +73,9 @@ async function run() {
           core.info(`Check issue ${issueNo}`);
           if (
             result &&
-            (title.includes(issueNo) ||
-              body.includes(`#${issueNo}`) ||
-              body.includes(`issues/${issueNo}`))
+            ((title && title.includes(issueNo)) ||
+              (body && body.includes(`#${issueNo}`)) ||
+              (body && body.includes(`issues/${issueNo}`)))
           ) {
             if (needCreatorAuthority) {
               result = await checkAuthority();
@@ -107,7 +107,7 @@ async function run() {
 
           const commentsArr = commentData.data;
           for (let i = 0; i < commentsArr.length; i++) {
-            if (commentsArr[i].body.includes(FIXED)) {
+            if (commentsArr[i].body && commentsArr[i].body.includes(FIXED)) {
               ifHasComment = true;
               break;
             }
