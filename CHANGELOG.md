@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.4.0
+
+`2021.10.19`
+
+- feat: add thanks.
+- fix: empty use includes.
+
 ## v1.3.0
 
 `2021.09.15`
